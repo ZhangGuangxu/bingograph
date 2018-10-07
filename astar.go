@@ -55,7 +55,7 @@ func (d *Astar) Search() error {
 		edge := d.frontier[idx]
 		d.spt[idx] = edge
 		i := edge.To
-		edge.Show()
+		//edge.Show() // for debug
 
 		if i == dst {
 			return nil
@@ -64,7 +64,7 @@ func (d *Astar) Search() error {
 		edges := d.graph.Edges()
 		for _, e := range edges[i] {
 			t := e.To
-			g := d.gcost[i] + e.Cost
+			g := d.gcost[i] + 1
 			if _, ok := d.frontier[t]; !ok {
 				fn(e, g, t)
 				pq.Insert(t)

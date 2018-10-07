@@ -4,8 +4,6 @@ func WayCount() int {
     return 4
 }
 
-const MaxNodeCount = 25
-
 func NodeIdx2Coord(i int) (x, y int) {
     x = i / 5
     y = i % 5

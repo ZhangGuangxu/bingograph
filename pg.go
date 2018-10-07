@@ -32,21 +32,6 @@ type IndexedPriorityQueueMin struct {
 	tail                 int // the index of the last item in data
 }
 
-// NewIndexedPriorityQueueMin returns an instance of IndexedPriorityQueueMin.
-func NewIndexedPriorityQueueMin(cost map[int]int) *IndexedPriorityQueueMin {
-	return NewIndexedPriorityQueueMinWithNWayAndSize(cost, 2, 1)
-}
-
-// NewIndexedPriorityQueueMinWithNWay returns an instance of IndexedPriorityQueueMin.
-func NewIndexedPriorityQueueMinWithNWay(cost map[int]int, nWay int) *IndexedPriorityQueueMin {
-	return NewIndexedPriorityQueueMinWithNWayAndSize(cost, nWay, 1)
-}
-
-// NewIndexedPriorityQueueMinWithSize returns an instance of IndexedPriorityQueueMin.
-func NewIndexedPriorityQueueMinWithSize(cost map[int]int, s int) *IndexedPriorityQueueMin {
-	return NewIndexedPriorityQueueMinWithNWayAndSize(cost, 2, s)
-}
-
 // NewIndexedPriorityQueueMinWithNWayAndSize returns an instance of IndexedPriorityQueueMin with init-size.
 func NewIndexedPriorityQueueMinWithNWayAndSize(cost map[int]int, nWay int, s int) *IndexedPriorityQueueMin {
 	return &IndexedPriorityQueueMin{

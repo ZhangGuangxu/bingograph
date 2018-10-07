@@ -7,17 +7,16 @@ import (
 type GraphEdge struct {
     From int // node index
     To int // node index
-    Cost int
 }
 
 func NewGraphEdge(f, t int) *GraphEdge {
     return &GraphEdge{
         From: f,
         To: t,
-        Cost: 1,
     }
 }
 
+// for debug
 func (e *GraphEdge) Show() {
     fmt.Printf("e: From=%d, To=%d\n", e.From, e.To)
 }
