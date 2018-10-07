@@ -38,7 +38,7 @@ func test4() {
 	g.AddNode(17)
 	g.AddNode(18)
 
-	var s PathSearcher = NewAstar(g, 0, 24)
+	s := NewAstar(g, 0, 24)
 	fmt.Println(s.Search())
 
 	if g.HasNode(19) {
@@ -78,7 +78,7 @@ func test3() {
 	g.AddNode(9)
 	g.AddNode(14)
 
-	var s PathSearcher = NewAstar(g, 0, 24)
+	s := NewAstar(g, 0, 24)
 	fmt.Println(s.Search())
 }
 
@@ -87,7 +87,7 @@ func test2() {
 	g.AddNode(0)
 	g.AddNode(23)
 	g.AddNode(24)
-	var s PathSearcher = NewAstar(g, 0, 24)
+	s := NewAstar(g, 0, 24)
 	fmt.Println(s.Search())
 	g.AddNode(6)
 	g.AddNode(12)
@@ -104,7 +104,7 @@ func test1() {
 	g.AddNode(23)
 	g.AddNode(24)
 	g.AddNode(24)
-	var s PathSearcher = NewAstar(g, 0, 24)
+	s := NewAstar(g, 0, 24)
 	fmt.Println(s.Search())
 	g.AddNode(5)
 	g.AddNode(10)
